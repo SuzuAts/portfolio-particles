@@ -1,11 +1,11 @@
 const CACHE_NAME = "particles-portfolio-v1";
 const urlsToCache = [
-  "/",
-  "/index.html",
-  "/styles.css",
-  "/script.js",
-  "/icons/icon-192.png",
-  "/icons/icon-512.png"
+  "/portfolio-particles/",
+  "/portfolio-particles/index.html",
+  "/portfolio-particles/styles.css",
+  "/portfolio-particles/script.js",
+  "/portfolio-particles/icons/icon-192.png",
+  "/portfolio-particles/icons/icon-512.png"
 ];
 
 // インストール時にキャッシュ
