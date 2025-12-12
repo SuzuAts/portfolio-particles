@@ -12,6 +12,9 @@
     <!-- 重要: クリティカル CSS は軽量にし、外部 CSS は rel=preload でヒントを出してから適用 -->
     <link rel="preload" href="styles.css" as="style">
     <link rel="stylesheet" href="styles.css">
+    <!-- PWA関連 -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#1a2a6c">
   </head>
   <body>
     <!-- アクセシビリティ: スキップリンクで主要コンテンツへ移動可能にする -->
@@ -61,5 +64,15 @@
     </main>
 
     <script src="script.js" defer></script>
+    <!-- Service Worker 登録 -->
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("/repo-name/service-worker.js")
+            .then((reg) => console.log("Service Worker registered:", reg))
+            .catch((err) => console.error("Service Worker registration failed:", err));
+        });
+      }
+    </script>
   </body>
 </html>
