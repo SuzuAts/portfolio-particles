@@ -9,7 +9,6 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Particles Portfolio</title>
     <meta name="description" content="マウスに反応するパーティクルが美しいネットワークを形成するポートフォリオサイト">
-    <!-- 重要: クリティカル CSS は軽量にし、外部 CSS は rel=preload でヒントを出してから適用 -->
     <link rel="preload" href="styles.css" as="style">
     <link rel="stylesheet" href="styles.css">
     <!-- PWA関連 -->
@@ -17,13 +16,8 @@
     <meta name="theme-color" content="#1a2a6c">
   </head>
   <body>
-    <!-- アクセシビリティ: スキップリンクで主要コンテンツへ移動可能にする -->
     <a class="skip-link" href="#main">メインコンテンツへスキップ</a>
-
-    <!-- キャンバス: 背景として全画面に配置 -->
     <canvas id="bgCanvas" aria-hidden="true"></canvas>
-
-    <!-- メインコンテンツ: シンプルで読みやすいヒーローセクション -->
     <main id="main" class="hero" role="main">
       <header class="hero__header">
         <h1>淳仁 — Portfolio</h1>
@@ -33,36 +27,23 @@
           <a class="btn btn--ghost" href="#about">プロフィール</a>
         </nav>
       </header>
-
       <section id="works" class="section">
         <h2>作品</h2>
         <p>システム管理・CLI ツール・オートメーションの取り組みを厳選して掲載。</p>
         <ul class="cards" aria-label="作品一覧">
-          <li class="card">
-            <h3>Windows 環境自動構築</h3>
-            <p>PowerShell とスクリプトで開発環境を再現可能に。</p>
-          </li>
-          <li class="card">
-            <h3>CLI ワークフロー最適化</h3>
-            <p>npm/Node、Git Bash、各種ツール連携による効率化。</p>
-          </li>
-          <li class="card">
-            <h3>トラブルシューティング集</h3>
-            <p>根本原因の特定手順とベストプラクティスの記録。</p>
-          </li>
+          <li class="card"><h3>Windows 環境自動構築</h3><p>PowerShell とスクリプトで開発環境を再現可能に。</p></li>
+          <li class="card"><h3>CLI ワークフロー最適化</h3><p>npm/Node、Git Bash、各種ツール連携による効率化。</p></li>
+          <li class="card"><h3>トラブルシューティング集</h3><p>根本原因の特定手順とベストプラクティスの記録。</p></li>
         </ul>
       </section>
-
       <section id="about" class="section">
         <h2>プロフィール</h2>
         <p>分析的で継続的に改善を重ねるスタイル。明快な構成と実用的な解決策を重視。</p>
       </section>
-
       <footer class="footer" role="contentinfo">
         <small>© <span id="year"></span> Junjin. All rights reserved.</small>
       </footer>
     </main>
-
     <script src="script.js" defer></script>
     <!-- Service Worker 登録 -->
     <script>
